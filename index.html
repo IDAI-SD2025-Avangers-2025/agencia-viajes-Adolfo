@@ -44,7 +44,10 @@
     </section>
 
     <!-- FORMULARIO PRINCIPAL -->
-    <div class="main-form">
+
+     <form action="" id="individual">
+
+            <div class="main-form">
         <!-- SECCIÓN 1: COTIZACIÓN INDIVIDUAL -->
         <section class="form-section">
             <h2 class="section-title">Cotización Individual</h2>
@@ -90,12 +93,25 @@
             </div>
 
             <div class="form-group">
-                <label for="dias-individual">Número de Días (769 MXN por día):</label>
-                <input type="number" id="dias-individual" name="dias-individual" min="1" max="365">
+                <label for="diasdiv">Número de Días (769 MXN por día):</label>
+                <input type="number" id="diasdiv" name="diasdiv" min="1"  max="365" >
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Individual</button>
+            <button type="button" class="submit-btn" onclick="calcular()">Cotización Individual</button>
+            <br>
+            <br>
+            <label for="total" style="font-weight: bold;">
+                Total a Pagar:
+                <input type="number" name="total" id="total" readonly>
+
+            </label>
+
         </section>
+
+     </form>
+
+
+     <form action="" id="paquetes">
 
         <!-- SECCIÓN 2: PAQUETES -->
         <section class="form-section">
@@ -113,38 +129,49 @@
             </div>
 
             <div class="form-group">
-                <label for="dias-paquete">Número de Días (899 MXN por día):</label>
-                <input type="number" id="dias-paquete" name="dias-paquete" min="1" max="365">
+                <label for="diaspaq">Número de Días (899 MXN por día):</label>
+                <input type="number" id="diaspaq" name="diaspaq" min="1" max="365">
             </div>
 
             <div class="form-group">
                 <label>Paquete Especial (19,999 MXN):</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="especial" value="crucero"> Crucero Romántico (7 días)</label>
+                <div class="checkbox-group">
+                    <label for="crucero"><input type="checkbox" name="crucero" value="crucero"> Crucero Romántico (7 días)</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Opciones Extra (699 MXN por opcion) :</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="extras" value="bebidas"> Bebidas Alcohólicas</label>
-                    <label><input type="checkbox" name="extras" value="buceo"> Clases de Buceo</label>
-                    <label><input type="checkbox" name="extras" value="expedicion"> Tour de Expedición</label>
-                    <label><input type="checkbox" name="extras" value="fotografias"> Paquete de Fotografías</label>
-                    <label><input type="checkbox" name="extras" value="pesca"> Pesca en Altamar</label>
+                    <label><input type="checkbox" name="bebidas" value="bebidas"> Bebidas Alcohólicas</label>
+                    <label><input type="checkbox" name="buceo" value="buceo"> Clases de Buceo</label>
+                    <label><input type="checkbox" name="expedicion" value="expedicion"> Tour de Expedición</label>
+                    <label><input type="checkbox" name="fotografias" value="fotografias"> Paquete de Fotografías</label>
+                    <label><input type="checkbox" name="pesca" value="pesca"> Pesca en Altamar</label>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Paquetes</button>
+            <button type="button" class="submit-btn" onclick="calcula()">Cotización Paquetes</button>
+            <br>
+            <br>
+            <label for="tota" style="font-weight: bold;">
+                Total a Pagar:
+                <input type="number" name="tota" id="tota" readonly>
+
+            </label>
+
         </section>
+
     </div>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
-        <p><strong>Ricardo Arturo Elizalde</strong></p>
-        <p>Matrícula: 12345678</p>
+        <p><strong>Adolfo Nava</strong></p>
+        <p>Matrícula: 45848</p>
         <p>WEB PAGE</p>
     </footer>
+
+     </form>
 
 
     <script src="script.js"></script>
