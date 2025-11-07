@@ -3,9 +3,8 @@ var formulario = document.getElementById("individual");
 function calcular(){
     var vuelo = formulario.vuelo.value;
     var hospedaje = formulario.hospedaje.value;
-    var adultos = formulario.adultos.value
-    var menores = formulario.menores.value
-
+    var adultos = formulario.adultos.value;
+    var menores = formulario.menores.value;
     var diasdiv = document.getElementById("diasdiv").value;
 
     var total = 0
@@ -79,8 +78,7 @@ function calcular(){
     if(menores == "4") {
     total = total + 437 * 4;     
     }   
-
-            
+     
     formulario.total.value = total + diasdiv * 769;    
 
 }
@@ -122,6 +120,8 @@ function calcula(){
     if(formulario2.crucero.checked == true){
     tota += 19999; 
     }
+
+
 
     if(formulario2.bebidas.checked == true){
     tota += 699; 
